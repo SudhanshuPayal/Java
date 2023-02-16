@@ -6,9 +6,13 @@ class Mobile
     public void showData(){
         System.out.println(brand+" : " + price +" : "+name);
     }
-    public static void show()
+    public static void show()//public static void show(Mobile obj)
+    //can only use static members and cannot use non static members 
+    //can use name but not brand and price
+    //we can use it if we have an object reference in out static method
     {
-        System.out.println("in static Method");
+        System.out.println("in static Method");//can use obj non static variables by using 
+        //obj.brand and obj.price
     }
 }
 class StaticMethod
@@ -31,6 +35,7 @@ class StaticMethod
         //Mobile.showData(); //cannot use it as its normal method and normal methods are 
                             //called by objects
         
-        Mobile.show();//can call it as its static method
+        Mobile.show();//Mobile.show(ob1);
+        //can call it as its static method
     }
 }
